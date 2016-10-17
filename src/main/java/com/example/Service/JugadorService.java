@@ -23,15 +23,9 @@ public class JugadorService {
     private EquipoRepository equipoRepository;
 
     public void Registro() {
-
-        //Registro equipos
-        Equipo equipo1 = new Equipo("equipo1", "Barcelona", LocalDate.of(2000, 1, 10));
-        equipoRepository.save(equipo1);
-        Equipo equipo2 = new Equipo("equipo2", "Madrid", LocalDate.of(2012, 4, 23));
-        equipoRepository.save(equipo2);
-        Equipo equipo3 = new Equipo("equipo3", "Asturias", LocalDate.of(20010, 12, 12));
-        equipoRepository.save(equipo3);
-
+        Equipo equipo1 = equipoRepository.findOne(1L);
+        Equipo equipo2 = equipoRepository.findOne(2L);
+        Equipo equipo3 = equipoRepository.findOne(3L);
 
         //Registro jugadores
         Jugador jugador1 = new Jugador("jugador1", LocalDate.of(2000, 1, 10), 10, 5, 8, Posicion.Ala);
@@ -61,6 +55,12 @@ public class JugadorService {
         jugadorRepository.
                 findByMediaCanastasRebotesAsistenciasPosicion().
                 forEach(Jugador -> System.out.println(Jugador[0] + ", media de canastas: " + Jugador[1] + ", media de asistencias: " + Jugador[2] + ", media de rebotes: " + Jugador[3]));
+
+
+         jugadorRepository.
+                 findByAvgMinMaxOfAllPosicion().
+                 forEach(jugador -> System.out.println(jugador[0] + "," +
+                         "Estadisticas de Canastas -> avg: "+jugador[1]+", Maximo: "+jugador[2]+", Minimo: "+jugador[3]+" Estadisticas de Asistencias -> avg: "+jugador[4]+", Maximo: "+jugador[5]+", Minimo: "+jugador[6]+" Estadisticas de Rebotes -> avg: "+jugador[7]+" Maximo: "+jugador[8]+" Minimo: "+jugador[9]));
 
 
     }

@@ -16,9 +16,11 @@ public class LigaBaloncestoDaw2Application {
 		EquipoService equipoService = context.getBean(EquipoService.class);
 		JugadorService jugadorService = context.getBean(JugadorService.class);
 
+
+		equipoService.registroEquipo();
 		jugadorService.Registro();
 		jugadorService.pruebas();
+		equipoService.pruebasEquipo();
 
-		//equipoService.prueba();
 	}
 }
