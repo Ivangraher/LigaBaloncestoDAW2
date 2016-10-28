@@ -11,6 +11,8 @@ public class LigaBaloncestoDaw2Application {
 
 	public static void main(String[] args) {
 
+
+
 		ConfigurableApplicationContext context = SpringApplication.run(LigaBaloncestoDaw2Application.class, args);
 
 		EquipoService equipoService = context.getBean(EquipoService.class);

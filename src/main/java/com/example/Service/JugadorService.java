@@ -52,6 +52,8 @@ public class JugadorService {
         System.out.println(jugadorRepository.findByfechaNacimientoBefore(LocalDate.of(2000, 1, 1)));
         System.out.println(jugadorRepository.findByPosicionEquals(Posicion.Base));
 
+            System.out.println(jugadorRepository);
+
         jugadorRepository.
                 findByMediaCanastasRebotesAsistenciasPosicion().
                 forEach(Jugador -> System.out.println(Jugador[0] + ", media de canastas: " + Jugador[1] + ", media de asistencias: " + Jugador[2] + ", media de rebotes: " + Jugador[3]));
@@ -63,5 +65,36 @@ public class JugadorService {
                          "Estadisticas de Canastas -> avg: "+jugador[1]+", Maximo: "+jugador[2]+", Minimo: "+jugador[3]+" Estadisticas de Asistencias -> avg: "+jugador[4]+", Maximo: "+jugador[5]+", Minimo: "+jugador[6]+" Estadisticas de Rebotes -> avg: "+jugador[7]+" Maximo: "+jugador[8]+" Minimo: "+jugador[9]));
 
 
+
+            /*
+            public interface JugadorService {
+            @GET("/api/jugadores")
+            Call<List<Jugador>> getAllJugadores(
+            @Header("Authorization") String Authorization
+    );
+
+            @POST("/api/jugadores")
+            Call<Jugador> createJugador(
+                    @Header("Authorization") String Authorization,
+                    @Body Jugador jugador
+    );
+
+
+            @PUT("/api/jugadores")
+            Call<Jugador> updateJugador(
+                    @Header("Authorization") String Authorization,
+                    @Body Jugador jugador
+    );
     }
+
+
+
+*/
+
+
+
+
+
+    }
+
 }
