@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * Created by Navy on 19/10/2016.
  */
-@RestController
-@RequestMapping("/jugadores")
+//@RestController
+//@RequestMapping("/jugadores")
 public class JugadorController {
 
     @Autowired

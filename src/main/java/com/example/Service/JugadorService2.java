@@ -1,8 +1,8 @@
 package com.example.Service;
 
 import com.example.Model.Jugador;
-import retrofit.Call;
-import retrofit.http.*;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 import java.util.List;
 
@@ -11,23 +11,37 @@ import java.util.List;
  */
 public interface JugadorService2 {
 
-    @GET("/api/jugadores")
-    Call<List<Jugador>> getAllJugadores(
-            @Header("Authorization") String Authorization
+    @GET("/players")
+    Call<List<Jugador>> getAllPlayers(
     );
 
-    @POST("/api/jugadores")
+    @POST("/jugadores")
     Call<Jugador> createJugador(
-            @Header("Authorization") String Authorization,
             @Body Jugador jugador
     );
 
-
-    @PUT("/api/jugadores")
+    @PUT("/jugadores")
     Call<Jugador> updateJugador(
-            @Header("Authorization") String Authorization,
             @Body Jugador jugador
     );
+
+    @GET("/jugadoresError")
+    Call<List<Jugador>> getError(
+    );
+
+    @GET("/jugadores/{id}")
+    Call<List<Jugador>> getAllJugadores(
+            @Path("id") Long id
+    );
+
+    @DELETE("/jugadores/{id}")
+    Call<Void> deleteJugador(
+          @Path("id") Long id
+    );
+
+
+
+
 }
 
 

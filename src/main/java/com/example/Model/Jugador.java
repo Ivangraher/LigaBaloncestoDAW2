@@ -1,5 +1,7 @@
 package com.example.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import java.time.LocalDate;
@@ -16,6 +18,7 @@ public class Jugador {
     @Column
     private String nombre;
 
+    @JsonIgnore
     @Column
     private LocalDate fechaNacimiento;
 

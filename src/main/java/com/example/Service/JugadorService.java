@@ -43,6 +43,12 @@ public class JugadorService {
         Jugador jugador5 = new Jugador("jugador5", LocalDate.of(2008, 3, 8), 10, 15, 18, Posicion.Pivot);
         jugador5.setEquipo(equipo1);
         jugadorRepository.save(jugador5);
+        Jugador jugador6 = new Jugador("jugador6", LocalDate.of(2018, 3, 8), 12, 1, 8, Posicion.Pivot);
+        jugador5.setEquipo(equipo1);
+        jugadorRepository.save(jugador6);
+        Jugador jugador7 = new Jugador("jugador7", LocalDate.of(2002, 5, 23), 11, 5, 24, Posicion.Base);
+        jugador7.setEquipo(equipo2);
+        jugadorRepository.save(jugador7);
     }
 
         public void pruebas() {

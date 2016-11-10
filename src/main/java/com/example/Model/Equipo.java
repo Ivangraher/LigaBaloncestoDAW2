@@ -1,5 +1,7 @@
 package com.example.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -18,6 +20,7 @@ public class Equipo {
     @Column
     private String ciudad;
 
+    @JsonIgnore
     @Column
     private LocalDate fechaCreacion;
 
