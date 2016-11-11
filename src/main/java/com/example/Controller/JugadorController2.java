@@ -97,6 +97,8 @@ public class JugadorController2 {
         jugadores.forEach(jugador ->
             jugadorMultiMap.put(jugador.getPosicion(), jugador));
 
+        System.out.println(jugadorMultiMap.get(Posicion.Base));
+
         return jugadorMultiMap.asMap();
 
     }
