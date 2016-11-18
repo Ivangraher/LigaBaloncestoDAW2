@@ -48,6 +48,7 @@ public class JugadorController2 {
         return jugador;
     }
 
+    //borrar esta query por ambiguedad
     @GetMapping("/{canastas}")
     public List<Jugador> findAllJugadoresCanastas() {
         return jugadorRepository.findAllJugadoresCanastas();
