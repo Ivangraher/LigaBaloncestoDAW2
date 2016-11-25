@@ -48,10 +48,9 @@ public class JugadorController2 {
         return jugador;
     }
 
-    //borrar esta query por ambiguedad
-    @GetMapping("/{canastas}")
-    public List<Jugador> findAllJugadoresCanastas() {
-        return jugadorRepository.findAllJugadoresCanastas();
+    @GetMapping("/orderByCanastas")
+    public List<Jugador> orderByJugadoresCanastas() {
+        return jugadorRepository.orderByJugadoresCanastas();
     }
 
     @GetMapping("/byCanastas/{canastas}")
@@ -76,7 +75,7 @@ public class JugadorController2 {
                 forEach(estadisticasPosicion -> {
 
                     EstadisticasPosicion aux = new EstadisticasPosicion();
-                    aux.setPosicion((String) estadisticasPosicion[0]);
+                    aux.setPosicion((Posicion) estadisticasPosicion[0]);
                     aux.setMinCanastas((Integer) estadisticasPosicion[1]);
                     aux.setMaxCanastas((Integer) estadisticasPosicion[2]);
                     aux.setAvgCanastas((Double) estadisticasPosicion[3]);

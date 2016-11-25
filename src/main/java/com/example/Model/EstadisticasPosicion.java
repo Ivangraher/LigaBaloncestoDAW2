@@ -14,8 +14,8 @@ public class EstadisticasPosicion {
         return posicion;
     }
 
-    public void setPosicion(String posicion) {
-        this.posicion = posicion;
+    public void setPosicion(Posicion posicion) {
+
     }
 
     public Integer getMinCanastas() {
